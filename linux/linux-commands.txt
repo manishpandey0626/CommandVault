@@ -1,0 +1,45 @@
+whoami
+man : manual of command (e.g. man whoami)
+clear(ctrl+l): clear the screen
+pwd: show current working directory
+ls : list directory
+ls -l long listing list
+ls -a (to show folder/file start with .)
+cd : change working directory
+cd .. (back to parent folder)
+cd ~ (go to home folder)
+cd / (go to root directory)
+mkdir (to make directory)
+mkdir -p
+touch to create file
+rmdir : to remove empty the folder
+rm : remove file and directory
+rm -v to verbose
+rm -r to remove directory and their content recursively
+open . : to open current directory on MAC
+xdg-open . to open in linux
+mv old_name new_name (rename to new file or move the file)
+cp (to copy the file)
+cp -r copy with content
+head file_name
+tail file_name -n 20
+tail filename -f (keep printing)
+date > filename (> to redirect)
+date >> filename (>> to redirect with append)
+cat concatenate the file also used to print the content of file
+
+less file_name (to read the file)
+/search_string
+G (end to the file) q to quit
+echo
+wc (word count)
+
+| pipe the command
+
+
+
+
+
+
+
+

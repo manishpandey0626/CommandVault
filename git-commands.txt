@@ -1,0 +1,72 @@
+1.show branch
+	local branch
+		git branch
+	remote branch
+		git branch -r
+	All local and remote branch
+		git branch -a
+
+2.Reset
+    [options]
+        --hard : Moves the HEAD to the specified commit and resets both the index(staging area) and working directory to match that commit
+        --mixed : Moves the HEAD to the specified commit and resets both the index(staging area)  to match that commit
+        --soft : Moves the HEAD to the specified commit but leaves your working directory and index (staging area) unchanged.
+
+	git reset --hard
+
+3.Create new branch
+	git checkout -b branch_name
+
+4.Push to a branch
+	if local branch does not exist on remote
+		git push -u origin my-branch-name
+	if local branch already exist
+		git push
+
+5.Merge the branch
+	git status
+	git checkout master
+	git merge my_branch
+
+6.Add new Project to GitHub
+
+	1. git init
+	2. git add .
+	3. git commit -m "msg"
+	4. git remote add origin <url of github project>
+	5. git push -f origin master
+
+
+7. Reset only one file
+git checkout -- filename;
+
+8. View Origin remote url
+	git remote -v
+
+9. Abort the merge
+	git merge --abort
+
+10. Add file patch level
+    git add -p filename
+
+11.
+git log --graph --oneline --stat  -p
+
+12. git reset HEAD~2 : reset last to commits
+
+13.Cherry-pick: git cherry-pick commit-hash
+
+14. git diff -> check changes
+
+15, to discard all local commit and reset your branch to remote
+    git reset --hard origin/remote_branch_name
+
+ git config --global http.sslVerify true
+
+# fetch the update from remote branch and merge to your current local branch.
+    git pull
+# when you want to pull changes from a specific branch on the origin remote, regardless of what your local branch is tracking.
+    git pull origin <branch-name>
+
+
+
