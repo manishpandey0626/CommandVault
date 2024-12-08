@@ -70,3 +70,7 @@ git log --graph --oneline --stat  -p
 
 
 
+16. to remove untracked files
+    git clean -f
+    # dry run
+    git clean -n
