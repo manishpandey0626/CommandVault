@@ -65,7 +65,7 @@ communicate with just container name.
 
 
 2. set repository
-```
+```bash
 echo \
   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
@@ -75,15 +75,14 @@ echo \
 3. `sudo apt-get update`
 
 4. Install docker
-```
+```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
 5. Create docker group and add user.
-```
+```bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
-
 ```
 
 6. Run docker Image
@@ -116,7 +115,7 @@ wsl --version # to confirm
 ---
 
 To search the log in the all pods.
-```
+```bash
 for pod in $(kubectl get pods -l app=orchestrator -n bipeatt -o jsonpath='{.items[*].metadata.name}'); do
   echo "Logs for pod: $pod"
   kubectl logs $pod -n bipeatt --since 5m| grep "Pipeline Execution Id= 683089"
